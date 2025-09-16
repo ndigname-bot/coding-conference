@@ -1,0 +1,225 @@
+
+body {
+   background-image: 
+   /* url("./assets/images/icon-github.svg"), */
+   /* url("./assets/images/favicon-32x32.png"),*/
+    url("./assets/images/image5.jpg"), 
+    url("./assets/images/background-desktop.png"),
+    url("./assets/images/image3.png");
+  
+  background-position: top left,center, top right;
+  background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 30px, cover, bottom right;
+  background-attachment: fixed;
+  
+
+  
+  margin-right: 200px;
+  margin-left:200px;
+  margin-top:40px;
+  font-family: "insconsolata";
+  padding: 10px;   /* space around content */
+  text-align: center;
+}
+
+
+    .container {
+  max-width: 400px;
+  margin: auto;      /* center horizontally */
+  text-align: center;
+}
+
+    h1 {
+        background-image:url("./assets/images/image2.jpg");
+         background-size: cover;   /* makes sure image fills the whole heading */
+          background-position: center;
+          background-repeat:no-repeat;
+          opacity:1px;
+       font-size: 4rem;
+      margin-bottom: 10px;
+      color: aliceblue;
+      padding: 40px;            /* add space so the image is visible */
+  text-align: center; 
+    }
+
+    p {
+      color:floralwhite;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    /* Upload Box */
+    .upload-box {
+      border: 2px dashed #555;
+      border-radius: 12px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .upload-box:hover {
+      border-color: #ff6b6b;
+    }
+
+    .upload-box input {
+      display: none;
+    }
+
+    /* Inputs */
+    input[type="text"], 
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    input::placeholder {
+      color: #888;
+    }
+
+    /* Button */
+    button {
+      width: 80%;
+      padding: 14px;
+      margin-top: 20px;
+      background: #ff6b6b;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff4c4c;
+       transform: translateY(-5px);   /* lift up */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);  /* shadow effect */
+    }
+
+
+
+    /* Ticket */
+    #ticket-container {
+      display: none;
+      margin-top: 30px;
+    }
+    /* Ticket styling */
+    #ticket {
+      display: none; /* 🚨 Hides the ticket until button is clicked */
+      margin: 20px auto;
+      background: #1a1a2e;
+      background-image: url(./assets/images/image6.png);
+      border-radius: 16px;
+      padding: 20px;
+      width: 350px;
+      box-shadow: 0 0 15px rgba(255,75,43,0.6);
+      text-align: center;
+    }
+
+    #ticket img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    #ticket h2 {
+      margin: 10px 0;
+      font-size: 22px;
+      color: #ff4b2b;
+    }
+
+    /* Ticket design */
+    .ticket {
+      margin-top: 20px;
+      background: linear-gradient(90deg, #4545b3, #c08dd7);
+      padding: 20px;
+      background-image:url(./assets/images/image6.png)
+      
+    }
+
+    /* Circle cut-outs on left and right */
+    .ticket::before,
+    .ticket::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 30px;
+      background: #0f0c29;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+    .ticket::before { left: -15px; }
+    .ticket::after { right: -15px; }
+
+    /* Divider line */
+    .divider {
+      width: 1px;
+      background: rgba(255,255,255,0.2);
+      margin: 0 15px;
+      height: 100%;
+    }
+
+    /* Avatar */
+    .ticket img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+    .ticket-info {
+      text-align: left;
+    }
+    .ticket-info h3 {
+      margin: 0;
+      color: #ff5722;
+    }
+    .highlight {
+      color: #ff5722;
+      font-weight: bold;
+    }
+    .upload-box {
+      border: 2px dashed #666;
+      border-radius: 10px;
+      width: 300px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.05);
+      transition: border 0.3s;
+    }
+
+    .upload-box:hover {
+      border-color: #ff4b2b;
+    }
+
+    .upload-box input {
+      display: none;
+    }
+
+    .upload-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: #ff4b2b;
+    }
+
+    .upload-text {
+      font-size: 14px;
+      color: #bbb;
+    }
