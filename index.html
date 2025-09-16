@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Ticket Generator</title>
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 strong>2025 Coding Conference Ticket </h1>
+<p>The coding conference 2025, Hosted worldwide buh has a general headquarters in the united states
+For all prorammers this is  a big opportunity to meet tp tier programmers ,hence has most importance.
+are u wiling to enter this years conference u can sign up below and get your ticket for the conference 
+in the united states ,Thank you for your time.
+</p>
+
+ <!-- Button to open form -->
+  <button id="openFormBtn">Sign Up</button>
+
+  <!-- Hidden Form -->
+  <form id="ticketForm" style="display:none; margin-top:20px;">
+    <input type="file" id="photo" accept="image/*" required>
+<br><main>
+  <section class ="upload-box">
+    <i class="upload-box"></i>
+  </section>
+  <div id="drop-zone">
+  <p>Drag & drop files here or click to upload</p>
+  <input type="file" id="fileInput" multiple hidden />
+</div>
+<ul id="fileList"></ul>
+<br>
+    <input type="text" id="Fullname" placeholder="Enter your full name" required><br><br>
+    <input type="email" id="Email address" placeholder="Enter your email" required><br><br>
+    <input type="text" id="github username" placeholder="Enter your Github username" required><br><br>
+    <button type="submit">Generate my Ticket</button>
+  </form>
+  
+
+ <!-- Ticket Output -->
+  <div id="ticket" style="display:azure; margin-top:20px; border:100px double dashed floralwhite; padding:10px; width:500px;">
+    <h2 font-size="24",em>2025 coding conference</h2>
+    <p style="display:ivory",strong>Hope to meet u there</p>
+    <img id="ticketPhoto" src="" alt="Uploaded Photo" width="100"><br><br>
+    <p><b>Name:</b> <span id="ticketName"></span></p>
+    <p><b>Email:</b> <span id="ticketEmail"></span></p>
+    <p><b>Github username:</b> <span id="ticket Github username"></span></p>
+    <p><b>Date:</b> Sept 20, 2025</p>
+    <p><b>Venue:</b> Tech Hall, USA</p>
+  </div>
+
+  <!-- Internal JavaScript -->
+  <script>
+    const openFormBtn = document.getElementById("openFormBtn");
+    const form = document.getElementById("ticketForm");
+    const ticket = document.getElementById("ticket");
+
+    // Show form when button is clicked
+    openFormBtn.addEventListener("click", function() {
+      form.style.display = "block";
+      openFormBtn.style.display = "none"; // Hide button
+    });
+
+    // Handle form submission
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Get values
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const photo = document.getElementById("photo").files[0];
+      const github=  document.getElementById("githubaccount").value;
+      // Fill ticket details
+      document.getElementById("ticketName").textContent = name;
+      document.getElementById("ticketEmail").textContent = email;
+      document.getElementById("githubaccount").textcontent= gitaccount;
+
+      // Show uploaded photo
+      if (photo) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          document.getElementById("ticketPhoto").src = event.target.result;
+        };
+        reader.readAsDataURL(photo);
+      }
+      <!-- Ticket Output -->
+ 
+
+
+      // Show ticket
+      ticket.style.display = "block";
+      javascript
+
+
+
+    });
+  </script>
+
+</body>
+</html>
